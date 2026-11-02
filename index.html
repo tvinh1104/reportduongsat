@@ -100,6 +100,22 @@ html{scroll-behavior:smooth}
 .vl p{margin:0;font-size:15px;color:#5B6577}
 .fx{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;font-weight:600;color:var(--ad)}
 .fx span{background:#fff;border:1px solid #CFE6FB;border-radius:999px;padding:3px 14px}
+.mx2{display:grid;grid-template-columns:160px 1fr 1fr;gap:10px;margin:0 0 20px}
+.ax{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;line-height:1.4;display:flex;flex-direction:column;gap:2px}
+.ax .ht{font-size:13px;letter-spacing:0;text-transform:none;font-weight:400;color:#5B6577}
+.axa{grid-column:2/4;color:var(--ad);padding:0 4px 10px;border-bottom:1px solid #CFE6FB}
+.axb{color:#334155;align-self:end;padding:0 4px 6px}
+.chA{background:#EAF3FD;color:var(--ad);font-weight:600;border-radius:12px;padding:12px 16px;font-size:15px;text-align:center}
+.chB{background:#E9EDF3;color:#1E293B;font-weight:600;border-radius:12px;padding:16px;font-size:14px;display:flex;flex-direction:column;justify-content:center;line-height:1.4}
+.chB small{font-weight:400;color:#475569;font-size:12px;margin-top:2px}
+.pc{background:#fff;border:1px solid #E6E9EF;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.pc .pn{font-size:12px;font-weight:600;color:#5B6577;letter-spacing:.1em}
+.pc strong{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tg{font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px}
+.tg.a{background:#EAF3FD;color:var(--ad)}
+.tg.b{background:#E9EDF3;color:#1E293B}
+@media (max-width:720px){.mx2{grid-template-columns:1fr 1fr}.mx2 .ghost,.mx2 .axb{display:none}.mx2 .axa{grid-column:1/-1}.mx2 .chB{grid-column:1/-1;margin-top:6px}}
 .sp{height:40px}
 .chain{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:0 0 40px}
 .chain .c{border-top:3px solid var(--ad)}
@@ -175,11 +191,9 @@ html{scroll-behavior:smooth}
 <section class="alt" id="s4"><div class="w">
 <div class="num">04</div><h2>Giải pháp</h2>
 <p class="big">1 toa xe vào sửa = 1 phiếu. Mọi thông tin, hồ sơ và tiến độ nằm trên cùng một phiếu.</p>
-<div class="mx">
-<div class="mh"></div><div class="mh">Toa xe hàng</div><div class="mh">Toa xe khách</div>
-<div class="mh" style="align-self:center">Sửa chữa nhỏ (SCN)</div><div class="mc"><b>Quy trình 1</b><span>SCN · toa xe hàng</span></div><div class="mc"><b>Quy trình 2</b><span>SCN · toa xe khách</span></div>
-<div class="mh" style="align-self:center">Sửa chữa lớn (SCL)</div><div class="mc"><b>Quy trình 3</b><span>SCL · toa xe hàng</span></div><div class="mc"><b>Quy trình 4</b><span>SCL · toa xe khách</span></div>
-</div>
+<p class="k">4 quy trình, chia theo 2 đặc thù của khách hàng</p>
+<div class="mx2"><div class="ghost"></div><div class="ax axa">Tiêu chí 1 · Loại toa xe<span class="ht">Bộ phận cần giải thể khác nhau</span></div><div class="ax axb">Tiêu chí 2 · Tu trình (loại sửa chữa) ↓<span class="ht">Phạm vi sửa chữa khác nhau</span></div><div class="chA">Toa xe hàng</div><div class="chA">Toa xe khách</div><div class="chB">Sửa chữa nhỏ (SCN)<small>2 đến 3 lần mỗi năm</small></div><div class="pc"><span class="pn">QUY TRÌNH 1</span><strong>Sửa chữa nhỏ toa xe hàng</strong><div class="tags"><span class="tg a">Toa xe hàng</span><span class="tg b">SCN</span></div></div><div class="pc"><span class="pn">QUY TRÌNH 2</span><strong>Sửa chữa nhỏ toa xe khách</strong><div class="tags"><span class="tg a">Toa xe khách</span><span class="tg b">SCN</span></div></div><div class="chB">Sửa chữa lớn (SCL)<small>5 năm một lần</small></div><div class="pc"><span class="pn">QUY TRÌNH 3</span><strong>Sửa chữa lớn toa xe hàng</strong><div class="tags"><span class="tg a">Toa xe hàng</span><span class="tg b">SCL</span></div></div><div class="pc"><span class="pn">QUY TRÌNH 4</span><strong>Sửa chữa lớn toa xe khách</strong><div class="tags"><span class="tg a">Toa xe khách</span><span class="tg b">SCL</span></div></div></div>
+<p class="p" style="margin:0 0 40px">2 loại toa xe × 2 tu trình = 4 quy trình. Hai đặc thù này chỉ tạo khác biệt ở bước Giải thể, các bước còn lại dùng chung.</p>
 <p class="k">Luồng chung 13 bước</p>
 <ol class="fl"><li class="r"><b>01</b>Giao tiếp toa xe</li><li class="r"><b>02</b>Ky xe</li><li class="r hl"><b>03</b>Giải thể<small>Khác nhau theo 4 quy trình</small></li><li class="r"><b>04</b>Giao sản phẩm công đoạn</li><li class="d"><b>05</b>Lắp hạ</li><li class="l"><b>06</b>Căn chỉnh</li><li class="l"><b>07</b>Tổng thể</li><li class="l"><b>08</b>Thử dột hắt</li><li class="l"><b>09</b>Upload hồ sơ DVC</li><li class="d"><b>10</b>Ra xưởng</li><li class="r"><b>11</b>Hoàn thiện hồ sơ</li><li class="r"><b>12</b>AI tổng hợp thông tin toa xe</li><li class=""><b>13</b>Hoàn thành sửa chữa</li></ol>
 <p class="p" style="margin:24px 0 48px">Bước Giải thể là điểm khác biệt duy nhất giữa 4 quy trình: toa xe hàng và khách có bộ phận khác nhau, SCN và SCL có phạm vi sửa chữa khác nhau.</p>
